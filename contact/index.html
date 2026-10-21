@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Innov8r with questions, corrections, collaboration ideas, or feedback.">
+  <title>Contact | Innov8r</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/batch2.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Innov8r home">INNOV<span>8R</span><small>.NET</small></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/blog/">Blog</a><a href="/products/">Digital Products</a>
+        <a href="/about/">About</a><a href="/contact/" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container page-shell">
+    <p class="eyebrow">/ ESTABLISH_CONNECTION</p>
+    <h1>Contact <span class="accent-text">Innov8r.</span></h1>
+    <p class="lead">Have a question, spotted an error, or want to suggest a topic? Use the form below to prepare your message.</p>
+    <div class="contact-layout">
+      <section class="info-panel">
+        <h2>Send a message</h2>
+        <form id="contact-form" class="contact-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <label for="topic">Message type</label>
+          <select id="topic" name="topic" required>
+            <option value="">Select a topic</option>
+            <option>General question</option><option>Correction or feedback</option>
+            <option>Partnership or collaboration</option><option>Privacy request</option><option>Other</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" maxlength="5000" required></textarea>
+          <button class="button button-primary" type="submit">Prepare message <span aria-hidden="true">→</span></button>
+          <p class="form-note">Setup notice: this form is currently a visual prototype and does not transmit or store submissions. A free form endpoint will be connected after a contact email is available.</p>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <aside class="contact-aside">
+        <div class="terminal-card"><p class="terminal-label">SYSTEM STATUS</p><p><span class="status-dot"></span> Form interface ready</p><p><span class="status-dot status-pending"></span> Delivery endpoint pending</p></div>
+        <h2>Good reasons to reach out</h2>
+        <ul class="clean-list"><li>Suggest a topic or tutorial.</li><li>Report an error or outdated detail.</li><li>Ask about a potential collaboration.</li><li>Make a privacy-related request.</li></ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Innov8r.net</span><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a><a href="/about/">About</a></div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('form-status').textContent = 'The form is not connected to a delivery service yet. Your message has not been sent. Please do not enter sensitive information.';
+    });
+  </script>
+</body>
+</html>
