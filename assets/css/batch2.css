@@ -1,0 +1,36 @@
+/* Batch 2 additions. This file extends the existing shared stylesheet without replacing it. */
+.page-shell { padding-top: 3.5rem; padding-bottom: 4.5rem; max-width: 1080px; }
+.eyebrow, .topic-code, .terminal-label { color: #42e8c4; font: 600 .78rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
+.accent-text { color: #42e8c4; }
+.lead { max-width: 760px; color: #b8c6d8; font-size: 1.15rem; line-height: 1.8; margin: 1rem 0 2.25rem; }
+.info-panel, .callout-panel, .topic-card, .terminal-card, .contact-aside { border: 1px solid rgba(66,232,196,.18); border-radius: 14px; background: rgba(10,20,36,.72); padding: clamp(1.15rem, 3vw, 2rem); margin: 1.25rem 0; }
+.info-panel h2, .callout-panel h2, .contact-aside h2 { margin-top: 0; }
+.topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.topic-card { margin: 0; padding: 1.25rem; }
+.topic-card h3 { margin: .65rem 0; }
+.topic-card p, .legal-section p, .clean-list { color: #b8c6d8; line-height: 1.8; }
+.clean-list { padding-left: 1.25rem; }
+.clean-list li { margin: .45rem 0; }
+.callout-panel { background: linear-gradient(135deg, rgba(18,42,62,.88), rgba(10,20,36,.88)); }
+.button { display: inline-flex; gap: .6rem; align-items: center; border-radius: 8px; padding: .8rem 1.1rem; font-weight: 700; text-decoration: none; cursor: pointer; }
+.button-primary { border: 1px solid #42e8c4; background: #42e8c4; color: #07131f; }
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, .8fr); gap: 1.5rem; align-items: start; }
+.contact-form { display: grid; gap: .65rem; }
+.contact-form label { color: #dce7f5; font-weight: 600; margin-top: .4rem; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: .8rem .9rem; color: #eaf2ff; background: #081321; border: 1px solid #2a4059; border-radius: 8px; font: inherit; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid #42e8c4; outline-offset: 2px; }
+.contact-form textarea { resize: vertical; }
+.form-note { color: #aabbd0; font-size: .88rem; line-height: 1.65; }
+.form-status { color: #42e8c4; line-height: 1.6; }
+.terminal-card { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.status-dot { display: inline-block; width: .55rem; height: .55rem; margin-right: .4rem; border-radius: 50%; background: #42e8c4; }
+.status-pending { background: #f0bd59; }
+.legal-page { max-width: 900px; }
+.legal-updated { color: #aabbd0; font-size: .9rem; }
+.notice-panel { border-left: 3px solid #f0bd59; padding: 1rem 1.25rem; margin: 1.5rem 0; background: rgba(240,189,89,.08); color: #dce7f5; line-height: 1.75; }
+.legal-section { padding: 1rem 0; border-bottom: 1px solid rgba(150,180,210,.14); }
+.legal-section h2 { font-size: 1.2rem; }
+@media (max-width: 720px) {
+  .topic-grid, .contact-layout { grid-template-columns: 1fr; }
+  .page-shell { padding-top: 2.25rem; }
+}
