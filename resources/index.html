@@ -3,13 +3,30 @@
 <meta name="description" content="Free Resources on Innov8r.net.">
 <title>Free Resources | Innov8r</title>
 <link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/batch2.css"><link rel="stylesheet" href="/assets/css/batch3.css"></head>
-<body><header class="site-header"><div class="container header-inner">
-<a class="logo" href="/" aria-label="Innov8r home">INNOV<span>8R</span><small>.NET</small></a>
-<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/products/">Digital Products</a><a href="/resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a></nav>
-</div></header>
+<body><div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
+  
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/" class="active" aria-current="page">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+  </header>
 <main class="container page-shell ">
 <p class="eyebrow">/ FREE_RESOURCE_DIRECTORY</p><h1>Useful tools. <span class="accent-text">Zero cost.</span></h1><p class="lead">A growing library of practical checklists and starter resources for safer, smarter work with technology.</p>
 <div class="resource-grid"><article class="resource-card"><span class="resource-tag">CYBERSECURITY / PLANNED</span><h2>Personal Security Checklist</h2><p>A step-by-step checklist for improving account security, updates, backups, and everyday online safety.</p><span class="resource-status">In preparation — not yet available</span></article><article class="resource-card"><span class="resource-tag">AI / PLANNED</span><h2>AI Tool Evaluation Sheet</h2><p>A framework for comparing AI tools by task fit, privacy, reliability, price, and time saved.</p><span class="resource-status">In preparation — not yet available</span></article><article class="resource-card"><span class="resource-tag">AUTOMATION / PLANNED</span><h2>Workflow Audit Worksheet</h2><p>Identify repetitive tasks, map a workflow, and decide whether automation is worth the effort.</p><span class="resource-status">In preparation — not yet available</span></article><article class="resource-card"><span class="resource-tag">IT SUPPORT / PLANNED</span><h2>Basic Troubleshooting Log</h2><p>Record symptoms, recent changes, error messages, and safe diagnostic steps before escalating an issue.</p><span class="resource-status">In preparation — not yet available</span></article></div><section class="callout-panel"><h2>Looking for a specific guide?</h2><p>Suggest a topic for a future resource.</p><a class="button button-primary" href="/contact/">Suggest a resource →</a></section>
-</main><footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Innov8r.net</span>
-<div class="footer-links"><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/affiliate-disclosure/">Affiliate Disclosure</a><a href="/contact/">Contact</a></div></div></footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
+</main><footer class="site-footer">
+    <div class="container footer-main">
+      <div><a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Innov8r. All rights reserved.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div>
+  </footer><script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+  </script>
+</body></html>

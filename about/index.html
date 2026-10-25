@@ -9,14 +9,12 @@
   <link rel="stylesheet" href="/assets/css/batch2.css">
 </head>
 <body>
+  <div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
+  
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/" aria-label="Innov8r home">INNOV<span>8R</span><small>.NET</small></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="/">Home</a><a href="/blog/">Blog</a><a href="/products/">Digital Products</a>
-        <a href="/about/" aria-current="page">About</a><a href="/contact/">Contact</a>
-      </nav>
-    </div>
+    <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/" class="active" aria-current="page">About</a><a href="/contact/">Contact</a></nav>
   </header>
   <main class="container page-shell">
     <p class="eyebrow">/ ABOUT_INNOV8R</p>
@@ -46,7 +44,22 @@
       <a class="button button-primary" href="/blog/">Explore the blog <span aria-hidden="true">→</span></a>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Innov8r.net</span><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a><a href="/about/">About</a></div></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div><a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Innov8r. All rights reserved.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div>
+  </footer>
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+  </script>
 </body>
 </html>

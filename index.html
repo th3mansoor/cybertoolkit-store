@@ -10,18 +10,11 @@
 </head>
 <body>
   <div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
+  
   <header class="site-header">
     <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="nav">
-      <a class="active" href="/">Home</a>
-      <a href="/blog/">Blog</a>
-      <a href="/products/">Products</a>
-      <a href="/free-resources/">Free Resources</a>
-      <a href="/tools/">Tools</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-    </nav>
+    <nav class="nav" aria-label="Main navigation"><a href="/" class="active" aria-current="page">Home</a><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
   </header>
 
   <main>
@@ -84,16 +77,21 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-main"><div><a class="brand" href="/">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div><div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/free-resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></div>
+    <div class="container footer-main">
+      <div><a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </div>
     <div class="container footer-bottom"><span>© 2026 Innov8r. All rights reserved.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div>
   </footer>
-  <script>
+<script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('nav-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
   </script>
 </body>
 </html>

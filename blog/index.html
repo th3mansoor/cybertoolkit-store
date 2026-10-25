@@ -6,8 +6,13 @@
   <meta name="theme-color" content="#07111f"><title>Blog — Innov8r</title><link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <div class="announcement"><span class="pulse"></span> KNOWLEDGE BASE // PRACTICAL GUIDES</div>
-  <header class="site-header"><a class="brand" href="/">INNOV<span>8</span>R<span class="brand-dot">.</span></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="/">Home</a><a class="active" href="/blog/">Blog</a><a href="/products/">Products</a><a href="/free-resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></header>
+  <div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
+  
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/blog/" class="active" aria-current="page">Blog</a><a href="/products/">Products</a><a href="/resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+  </header>
   <main>
     <section class="page-hero"><div class="container"><p class="eyebrow">/ KNOWLEDGE_BASE</p><h1>Cybersecurity & Technology Blog</h1><p>Practical tutorials, explainers and ideas across cybersecurity, AI, automation and IT support. New content will be published as each guide is researched and reviewed.</p></div></section>
     <section class="container content-section">
@@ -23,6 +28,22 @@
       <p class="notice" style="margin-top:24px">Editorial note: These are starter topic summaries. Full articles should be researched, written and reviewed before the site is promoted for search traffic or AdSense approval.</p>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-main"><div><a class="brand" href="/">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div><div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/free-resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></div><div class="container footer-bottom"><span>© 2026 Innov8r.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div><a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Innov8r. All rights reserved.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div>
+  </footer>
   <script>const t=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');t.addEventListener('click',()=>{const o=n.classList.toggle('nav-open');t.setAttribute('aria-expanded',String(o));});</script>
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+  </script>
 </body></html>
