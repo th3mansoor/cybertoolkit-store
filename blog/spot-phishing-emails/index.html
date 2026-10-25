@@ -1,49 +1,523 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Practical articles and tutorials about cybersecurity, AI tools, automation and IT support.">
-  <meta name="theme-color" content="#07111f"><title>Blog — Innov8r</title><link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Learn how to spot a phishing email with 10 practical warning signs, plus steps to take if you click a suspicious link or share sensitive information.">
+  <meta name="author" content="Innov8r">
+  <title>How to Spot a Phishing Email: 10 Warning Signs | Innov8r</title>
+  <link rel="canonical" href="https://innov8r.net/blog/spot-phishing-emails/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Spot a Phishing Email: 10 Warning Signs">
+  <meta property="og:description" content="Recognize phishing emails, check suspicious links, and learn what to do if you click one.">
+  <meta property="og:url" content="https://innov8r.net/blog/spot-phishing-emails/">
+
+  <style>
+    .article-wrap {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .article-breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      color: var(--text-muted, #a0a9ba);
+    }
+
+    .article-breadcrumbs a {
+      color: var(--accent, #00e5ff);
+      text-decoration: none;
+    }
+
+    .article-header {
+      margin-bottom: 36px;
+    }
+
+    .article-category {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      border-radius: 999px;
+      color: var(--accent, #00e5ff);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-header h1 {
+      font-size: clamp(2.1rem, 5vw, 3.5rem);
+      line-height: 1.12;
+      margin: 0 0 18px;
+    }
+
+    .article-meta {
+      color: var(--text-muted, #a0a9ba);
+      font-size: 0.92rem;
+    }
+
+    .article-content {
+      color: var(--text, #e6edf7);
+      font-size: 1.04rem;
+      line-height: 1.85;
+    }
+
+    .article-content h2 {
+      margin-top: 42px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .article-content h3 {
+      margin-top: 26px;
+      margin-bottom: 8px;
+    }
+
+    .article-content a {
+      color: var(--accent, #00e5ff);
+      text-underline-offset: 3px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 25px;
+    }
+
+    .article-content li {
+      margin-bottom: 10px;
+    }
+
+    .article-callout {
+      margin: 28px 0;
+      padding: 20px 22px;
+      border-left: 3px solid var(--accent, #00e5ff);
+      border-radius: 8px;
+      background: rgba(0, 229, 255, 0.06);
+    }
+
+    .article-checklist {
+      padding: 22px;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .article-cta {
+      margin-top: 48px;
+      padding: 26px;
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 14px;
+      background: rgba(0, 229, 255, 0.045);
+    }
+
+    .article-cta h2 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+      .article-wrap {
+        width: min(100% - 28px, 900px);
+        padding-top: 36px;
+      }
+
+      .article-content {
+        font-size: 1rem;
+      }
+
+      .article-checklist,
+      .article-cta {
+        padding: 18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Spot a Phishing Email: 10 Warning Signs",
+    "description": "Learn to recognize phishing emails and respond safely to suspicious messages.",
+    "author": {
+      "@type": "Organization",
+      "name": "Innov8r"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Innov8r",
+      "url": "https://innov8r.net/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://innov8r.net/blog/spot-phishing-emails/"
+    },
+    "inLanguage": "en"
+  }
+  </script>
 </head>
+
 <body>
-  <div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
-  
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/blog/" class="active" aria-current="page">Blog</a><a href="/products/">Products</a><a href="/resources/">Free Resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
-  </header>
-  <main>
-    <section class="page-hero"><div class="container"><p class="eyebrow">/ KNOWLEDGE_BASE</p><h1>Cybersecurity & Technology Blog</h1><p>Practical tutorials, explainers and ideas across cybersecurity, AI, automation and IT support. New content will be published as each guide is researched and reviewed.</p></div></section>
-    <section class="container content-section">
-      <div class="section-heading"><div><p class="eyebrow">BROWSE BY TOPIC</p><h2>Explore the library.</h2></div></div>
-      <div class="content-grid">
-        <article class="content-card" id="cybersecurity"><span class="category">CYBERSECURITY</span><h2>Cybersecurity Basics: A Practical Starter Checklist</h2><p>Start with multi-factor authentication, updates, backups, least privilege and a clear incident-reporting process.</p><a href="/free-resources/">Explore related resources →</a></article>
-        <article class="content-card" id="ai"><span class="category">AI TOOLS</span><h2>How to Evaluate an AI Tool Before Using It</h2><p>Assess data handling, accuracy, access controls, pricing limits and whether the tool fits your actual workflow.</p><a href="/free-resources/">Browse learning resources →</a></article>
-        <article class="content-card" id="automation"><span class="category">AUTOMATION</span><h2>Plan Your First Reliable Automation Workflow</h2><p>Define the trigger, inputs, expected result, error handling and human approval points before connecting tools.</p><a href="/products/">See workflow templates →</a></article>
-        <article class="content-card" id="it-support"><span class="category">IT SUPPORT</span><h2>A Repeatable Method for Troubleshooting IT Issues</h2><p>Record symptoms, identify scope, check recent changes, test one hypothesis at a time and document the resolution.</p><a href="/free-resources/">Explore practical resources →</a></article>
-        <article class="content-card"><span class="category">GRC & COMPLIANCE</span><h2>Build a Useful Risk Register</h2><p>Track assets, risk scenarios, likelihood, impact, owners, treatment decisions and review dates in one place.</p><a href="/products/">Explore digital products →</a></article>
-        <article class="content-card"><span class="category">NETWORKING</span><h2>Network Troubleshooting: Start with the Basics</h2><p>Check physical connectivity, IP configuration, DNS, routing and service availability in a logical sequence.</p><a href="/free-resources/">Browse resources →</a></article>
-      </div>
-      <p class="notice" style="margin-top:24px">Editorial note: These are starter topic summaries. Full articles should be researched, written and reviewed before the site is promoted for search traffic or AdSense approval.</p>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-main">
-      <div><a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a><p>Practical cybersecurity, AI, automation and IT support.</p></div>
-      <div class="footer-links"><a href="/blog/">Blog</a><a href="/products/">Products</a><a href="/resources/">Free resources</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+
+  <div class="announcement">
+    <span class="pulse"></span>
+    Practical technology for a safer, smarter digital world
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="Innov8r home">
+        INNOV<span>8</span>R<span class="brand-dot">.</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/products/">Products</a>
+        <a href="/resources/">Free Resources</a>
+        <a href="/tools/">Tools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Innov8r. All rights reserved.</span><span>Privacy and legal pages will be published before advertising or tracking is enabled.</span></div>
+  </header>
+
+  <main class="article-wrap">
+    <div class="article-breadcrumbs">
+      <a href="/">Home</a> /
+      <a href="/blog/">Blog</a> /
+      <span>Phishing Email Safety</span>
+    </div>
+
+    <article>
+      <header class="article-header">
+        <span class="article-category">Cybersecurity</span>
+        <h1>How to Spot a Phishing Email: 10 Warning Signs</h1>
+        <p class="article-meta">
+          A practical guide for everyday internet users · 8-minute read
+        </p>
+      </header>
+
+      <div class="article-content">
+        <p>
+          A convincing email can look as if it came from your bank, a delivery
+          company, your employer, or a service you use every day. But its real
+          purpose may be to steal your password, collect financial information,
+          or trick you into installing malicious software.
+        </p>
+
+        <p>
+          This type of deception is called <strong>phishing</strong>. Attackers
+          use misleading messages and websites to persuade people to reveal
+          information or take unsafe actions. Learning to recognize common
+          warning signs can help you avoid many of these scams.
+        </p>
+
+        <div class="article-callout">
+          <strong>Important rule:</strong> If an unexpected message asks you to
+          sign in, pay, disclose a verification code, or open an attachment,
+          pause and verify the request through a separate, trusted channel.
+        </div>
+
+        <h2>10 warning signs of a phishing email</h2>
+
+        <h3>1. The sender's address looks wrong</h3>
+        <p>
+          Check the full email address, not just the display name. A message
+          claiming to come from a familiar company may use a misspelled domain,
+          an unrelated address, or an extra word or character.
+        </p>
+        <p>
+          A familiar logo or display name is not proof that the message is
+          genuine. Even a plausible address should be considered alongside the
+          message's content and the action it requests.
+        </p>
+
+        <h3>2. The message creates urgency or fear</h3>
+        <p>
+          Phrases such as "Your account will be closed today" or "Immediate
+          payment required" are designed to pressure you into acting before
+          you think. Scammers often use deadlines, threats, or alarming claims.
+        </p>
+        <p>
+          Do not use the message's links to resolve the supposed emergency.
+          Open the company's official app or type its known website address
+          into your browser instead.
+        </p>
+
+        <h3>3. Links lead somewhere unexpected</h3>
+        <p>
+          A link's visible text can hide its real destination. On a computer,
+          you can usually hover over a link to inspect its destination without
+          opening it. On a phone, avoid tapping suspicious links just to check
+          where they lead.
+        </p>
+        <p>
+          Watch for misspellings, unusual subdomains, misleading lookalike
+          characters, and domains that do not match the organization. HTTPS
+          alone does not mean a website is trustworthy.
+        </p>
+
+        <h3>4. It asks for passwords or verification codes</h3>
+        <p>
+          Treat requests for passwords, one-time verification codes, recovery
+          codes, or authentication approvals with extreme caution. Criminals
+          may use stolen credentials or real-time phishing pages to take over
+          accounts.
+        </p>
+        <p>
+          Never share a one-time code with someone who contacts you
+          unexpectedly. Verify the request using the service's official
+          website, app, or published support channel.
+        </p>
+
+        <h3>5. The greeting or details are suspicious</h3>
+        <p>
+          Generic greetings, incorrect names, unexpected account details, and
+          awkward wording can be warning signs. However, polished grammar and
+          personalized details do not prove that an email is legitimate.
+        </p>
+        <p>
+          Attackers can copy genuine business messages and use information
+          obtained from public profiles or previous data breaches.
+        </p>
+
+        <h3>6. It contains an unexpected attachment</h3>
+        <p>
+          Be cautious with unexpected invoices, delivery notices, documents,
+          archives, and executable files. Attachments may contain malicious
+          content or direct you to a fake sign-in page.
+        </p>
+        <p>
+          If you were not expecting the file, confirm with the sender through a
+          separate channel before opening it. Do not enable macros or bypass
+          security warnings just because a message tells you to.
+        </p>
+
+        <h3>7. It requests unusual payments or gift cards</h3>
+        <p>
+          Requests to pay through gift cards, cryptocurrency, unfamiliar
+          payment services, or unusual bank-transfer instructions deserve
+          extra scrutiny. Business email compromise scams may impersonate
+          managers, suppliers, or executives.
+        </p>
+        <p>
+          Verify changes to bank details and unusual payment requests using a
+          known phone number or an established internal approval process.
+        </p>
+
+        <h3>8. The message is unexpected or out of context</h3>
+        <p>
+          An unexpected password reset, shared document, parcel notification,
+          invoice, or account alert may be bait. Ask yourself whether you
+          initiated the action and whether the message fits your recent
+          activity.
+        </p>
+        <p>
+          If you are unsure, visit the service directly rather than following
+          the message's instructions.
+        </p>
+
+        <h3>9. It asks you to bypass normal procedures</h3>
+        <p>
+          Be wary of requests to keep a transaction secret, skip approval,
+          install remote-access software, change payment details immediately,
+          or ignore normal security checks.
+        </p>
+        <p>
+          Verify unusual instructions with the person or organization using
+          contact information you already trust—not the contact details
+          supplied in the suspicious message.
+        </p>
+
+        <h3>10. It seems too good—or too alarming—to be true</h3>
+        <p>
+          Unexpected prizes, refunds, job offers, exclusive deals, and
+          extraordinary account warnings can all be used to manipulate you.
+          Scammers exploit excitement and fear alike.
+        </p>
+        <p>
+          Be especially careful if you must provide personal information,
+          pay a fee, or sign in before you can receive the supposed benefit.
+        </p>
+
+        <h2>What to do when you receive a suspicious email</h2>
+        <ol>
+          <li>Do not click its links or open unexpected attachments.</li>
+          <li>Do not reply with personal information or verification codes.</li>
+          <li>Verify the claim using the official app, known website, or trusted contact details.</li>
+          <li>Report the message through your email provider's phishing-reporting option, if available.</li>
+          <li>Delete it after reporting, following your organization's security procedures if it is a work account.</li>
+        </ol>
+
+        <h2>What if you already clicked a phishing link?</h2>
+        <p>
+          Do not panic. The right response depends on what happened after you
+          clicked. Opening a link, entering a password, downloading a file, and
+          running a program carry different levels of risk.
+        </p>
+
+        <div class="article-checklist">
+          <h3>If you only opened the link</h3>
+          <ul>
+            <li>Close the suspicious page and do not enter any information.</li>
+            <li>Check that your browser and operating system are up to date.</li>
+            <li>If a file downloaded, do not open it; follow your device's security guidance.</li>
+          </ul>
+
+          <h3>If you entered a password</h3>
+          <ul>
+            <li>Use the service's genuine website or app to change the password immediately.</li>
+            <li>If you reused that password elsewhere, change it on those accounts too.</li>
+            <li>Sign out other sessions where possible and review recovery details and account activity.</li>
+            <li>Enable multifactor authentication if available.</li>
+          </ul>
+
+          <h3>If you shared financial details or a verification code</h3>
+          <ul>
+            <li>Contact your bank or relevant provider using its official contact details.</li>
+            <li>Ask about blocking transactions, securing the account, or replacing compromised payment details.</li>
+            <li>Secure the affected account and review recent activity.</li>
+          </ul>
+
+          <h3>If you downloaded or ran a suspicious file</h3>
+          <ul>
+            <li>Stop interacting with the file or program.</li>
+            <li>Use your device's trusted security software and follow its remediation guidance.</li>
+            <li>If it is a work device, contact your IT or security team promptly.</li>
+          </ul>
+        </div>
+
+        <h2>How to reduce your phishing risk</h2>
+        <ul>
+          <li><strong>Use multifactor authentication:</strong> It can help protect accounts if a password is stolen. Passkeys or phishing-resistant authentication provide stronger protection where supported.</li>
+          <li><strong>Use unique passwords:</strong> A reputable password manager can help you avoid reusing credentials.</li>
+          <li><strong>Keep software updated:</strong> Install security updates for your operating system, browser, and applications.</li>
+          <li><strong>Maintain backups:</strong> Keep important files backed up and make sure you can restore them.</li>
+          <li><strong>Verify unusual requests:</strong> Use a separate trusted channel, particularly for payments and account changes.</li>
+        </ul>
+
+        <p>
+          For more foundational security practices, read our guide:
+          <a href="/blog/secure-your-digital-life/">
+            How to Secure Your Digital Life: A Practical Checklist
+          </a>.
+        </p>
+
+        <h2>Quick phishing safety checklist</h2>
+        <div class="article-checklist">
+          <ul>
+            <li>Check the sender's full address and the actual destination of links.</li>
+            <li>Pause when a message demands urgent action.</li>
+            <li>Never share passwords or verification codes in response to unexpected requests.</li>
+            <li>Verify payment changes and sensitive requests independently.</li>
+            <li>Do not open unexpected attachments or bypass security warnings.</li>
+            <li>Report suspicious messages and act quickly if you disclosed information.</li>
+          </ul>
+        </div>
+
+        <h2>Final thoughts</h2>
+        <p>
+          Phishing messages can be convincing, and no single warning sign
+          catches every scam. The most reliable habit is to slow down and
+          verify unexpected requests independently—especially when money,
+          passwords, or sensitive information are involved.
+        </p>
+
+        <div class="article-cta">
+          <h2>Build better digital security habits</h2>
+          <p>
+            Explore more practical guides on cybersecurity, technology, and
+            safer use of digital tools on Innov8r.
+          </p>
+          <p>
+            <a href="/blog/">Explore the Innov8r Blog</a>
+            &nbsp; | &nbsp;
+            <a href="/resources/">Browse Free Resources</a>
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="brand" aria-label="Innov8r home">
+            INNOV<span>8</span>R<span class="brand-dot">.</span>
+          </a>
+          <p>Practical technology for a safer, smarter digital world.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/cookies/">Cookie Policy</a>
+          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Innov8r. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
-  <script>const t=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');t.addEventListener('click',()=>{const o=n.classList.toggle('nav-open');t.setAttribute('aria-expanded',String(o));});</script>
-<script>
-    const toggle = document.querySelector('.menu-toggle');
+
+  <button class="back-to-top" type="button" aria-label="Scroll back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('nav-open');
-        toggle.setAttribute('aria-expanded', String(open));
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('active');
       });
     }
+
+    // Back-to-top button
+    const backToTop = document.querySelector('.back-to-top');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (backToTop) {
+      const updateBackToTop = () => {
+        backToTop.classList.toggle('is-visible', window.scrollY > 320);
+      };
+
+      window.addEventListener('scroll', updateBackToTop, { passive: true });
+      updateBackToTop();
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: reducedMotion.matches ? 'auto' : 'smooth'
+        });
+      });
+    }
+
+    // Current year
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   </script>
-</body></html>
+
+</body>
+</html>
