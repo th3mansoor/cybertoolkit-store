@@ -162,33 +162,20 @@
 
 <body>
 
-  <div class="announcement">
-    <span class="pulse"></span>
-    Practical technology for a safer, smarter digital world
-  </div>
+  <div class="announcement"><span class="pulse"></span> Practical technology for a safer, smarter digital world</div>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a href="/" class="brand" aria-label="Innov8r home">
-        INNOV<span>8</span>R<span class="brand-dot">.</span>
-      </a>
-
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/products/">Products</a>
-        <a href="/resources/">Free Resources</a>
-        <a href="/tools/">Tools</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a class="active" href="/blog/" aria-current="page">Blog</a>
+      <a href="/products/">Products</a>
+      <a href="/resources/">Free Resources</a>
+      <a href="/tools/">Tools</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
 
   <main class="article-wrap">
@@ -449,29 +436,24 @@
     </article>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="/" class="brand" aria-label="Innov8r home">
-            INNOV<span>8</span>R<span class="brand-dot">.</span>
-          </a>
-          <p>Practical technology for a safer, smarter digital world.</p>
-        </div>
-
-        <div class="footer-links">
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-          <a href="/cookies/">Cookie Policy</a>
-          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand" href="/" aria-label="Innov8r home">INNOV<span>8</span>R<span class="brand-dot">.</span></a>
+        <p>Practical cybersecurity, AI, automation and IT support.</p>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year">2026</span> Innov8r. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/blog/">Blog</a>
+        <a href="/products/">Products</a>
+        <a href="/resources/">Free resources</a>
+        <a href="/tools/">Tools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
       </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Innov8r. All rights reserved.</span>
+      <span>Privacy and legal pages will be published before advertising or tracking is enabled.</span>
     </div>
   </footer>
 
@@ -488,7 +470,7 @@
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-        nav.classList.toggle('active');
+        nav.classList.toggle('nav-open');
       });
     }
 
